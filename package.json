@@ -1,0 +1,39 @@
+{
+  "name": "linq-js",
+  "version": "0.0.0",
+  "description": "LINQ for JavaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=prod webpack",
+    "dev": "cross-env NODE_ENV=dev webpack",
+    "test": "cross-env NODE_ENV=test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aotroshko/linq-js.git"
+  },
+  "keywords": [
+    "linq",
+    "es6",
+    "webpack"
+  ],
+  "author": {
+    "name": "Andrii Otroshko",
+    "email": "otroshko@gmail.com",
+    "url": "https://github.com/aotroshko"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aotroshko/linq-js/issues"
+  },
+  "homepage": "https://github.com/aotroshko/linq-js#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "cross-env": "^2.0.0",
+    "webpack": "^1.13.2"
+  }
+}
