@@ -8,15 +8,15 @@ module.exports = function(config) {
         preprocessors: {
             'src/**/*.spec.js': ['webpack']
         },
-		webpack: {
-			module: {
-				preLoaders: [
-					{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
-				]
-			},
-			watch: false
-		},
-		webpackMiddleware: { stats: 'errors-only', noInfo: true },
+        webpack: {
+            module: {
+                preLoaders: [
+                    { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+                ]
+            },
+            watch: false
+        },
+        webpackMiddleware: { stats: 'errors-only', noInfo: true },
         plugins: [
             'karma-chrome-launcher',
             'karma-jasmine',
