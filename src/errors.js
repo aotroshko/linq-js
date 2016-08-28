@@ -15,13 +15,13 @@ class CustomError extends Error {
 
 class ArgumentNullError extends CustomError {
 	constructor(paramName) {
-		super('Value cannot be null. Parameter name: ${paramName}');
+		super('Value cannot be null. Parameter name: ' + paramName);
 	}
 }
 
 class ArgumentOutOfRangeError extends CustomError {
 	constructor(paramName) {
-		super('Specified argument was out of the range. Parameter name: ${paramName}');
+		super('Specified argument was out of the range. Parameter name: ' + paramName);
 	}
 }
 
