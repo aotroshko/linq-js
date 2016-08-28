@@ -1,20 +1,22 @@
-export default (targetArray, predicate) => {
-    if(!targetArray) {
-        throw new Error('targetArray is not defined');
-    }
+import * as err from './errors.js';
 
-    if(!predicate) {
-        throw new Error('predicate is not defined');
-    }
+export default (source, predicate) => {
+	if(!source) {
+		throw new err.ArgumentNullError('source');
+	}
 
-    let result = [];
+	if(!predicate) {
+		throw new err.ArgumentNullError('predicate');
+	}
 
-    for (let i = 0, len = targetArray.length; i < len; i++) {
-        let item = targetArray[i];
-        if (predicate(item)) {
-            result.push(item);
-        }
-    }
+	let result = [];
 
-    return result;
+	for (let i = 0, len = source.length; i < len; i++) {
+		let item = source[i];
+		if (predicate(item)) {
+			result.push(item);
+		}
+	}
+
+	return result;
 }
