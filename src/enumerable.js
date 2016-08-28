@@ -4,9 +4,9 @@ let source = Symbol();
 
 class Enumerable {
 	constructor(arr) {
-		if(Object.prototype.toString.call(arr) === '[object Array]'){
+		if (Object.prototype.toString.call(arr) === '[object Array]') {
 			this[source] = arr;
-		} else if(typeof arr == 'string' || arr instanceof String){
+		} else if (typeof arr == 'string' || arr instanceof String) {
 			this[source] = arr.split('');
 		} else {
 			throw new Error('Given parameter is not an array.');
