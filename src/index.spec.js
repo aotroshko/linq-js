@@ -1,7 +1,11 @@
-import index from './index';
+import index from './index.js';
 
-describe('Index', () => {
-    it('should be true', () => {
-        expect(true).toBe(true);
-    });
+describe('index.js', () => {
+	it('should add asEnumerable function to Array.prototype', () => {
+		expect(Array.prototype.asEnumerable).toBeDefined();
+	});
+
+	it('should add asEnumerable function to String.prototype', () => {
+		expect(String.prototype.asEnumerable).toBeDefined();
+	});
 });
