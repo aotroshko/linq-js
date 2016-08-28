@@ -1,4 +1,4 @@
-import * as err from './errors.js';
+import * as err from '../src/errors.js';
 
 describe('errors.js', () => {
 	describe('ArgumentNullError', () => {

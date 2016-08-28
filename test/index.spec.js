@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from '../src/index.js';
 
 describe('index.js', () => {
 	it('should add asEnumerable function to Array.prototype', () => {

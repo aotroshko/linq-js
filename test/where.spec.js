@@ -1,5 +1,5 @@
-import where from './where.js';
-import * as err from './errors.js';
+import where from '../src/where.js';
+import * as err from '../src/errors.js';
 
 describe('where.js', () => {
 	let source = [1, 2, 3, 4, 5, 6, 7],
