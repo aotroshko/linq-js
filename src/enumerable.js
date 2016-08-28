@@ -1,4 +1,5 @@
-import where from './where.js';
+import anyFn from './any.js';
+import whereFn from './where.js';
 
 let source = Symbol();
 
@@ -13,12 +14,16 @@ class Enumerable {
 		}
 	}
 
+	any(predicate) {
+		return anyFn(this[source], predicate);
+	}
+
 	toArray() {
 		return this[source];
 	}
 
 	where(predicate) {
-		this[source] = where(this[source], predicate);
+		this[source] = whereFn(this[source], predicate);
 		return this;
 	}
 }
