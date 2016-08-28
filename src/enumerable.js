@@ -13,6 +13,14 @@ class Enumerable {
 		}
 	}
 
+	/**
+	 * Returns an array that contains the elements from the input sequence.
+	 * @returns {Array} array
+	 */
+	toArray() {
+		return this[source];
+	}
+
 	where(predicate) {
 		this[source] = where(this[source], predicate);
 		return this;
