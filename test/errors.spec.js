@@ -9,9 +9,9 @@ describe('errors.js', () => {
 		it('should return the correct message', () => {
 			let paramName = 'testParam';
 
-			try{
+			try {
 				throw new err.ArgumentNullError(paramName);
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe('Value cannot be null. Parameter name: ' + paramName);
 			}
@@ -26,9 +26,9 @@ describe('errors.js', () => {
 		it('should return the correct message', () => {
 			let paramName = 'testParam';
 
-			try{
+			try {
 				throw new err.ArgumentOutOfRangeError(paramName);
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe('Specified argument was out of the range. Parameter name: ' + paramName);
 			}
@@ -41,9 +41,9 @@ describe('errors.js', () => {
 		});
 
 		it('should return the correct message', () => {
-			try{
+			try {
 				throw new err.IndexOutOfRangeError();
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe('Index was outside the bounds of the array.');
 			}
@@ -56,9 +56,9 @@ describe('errors.js', () => {
 		});
 
 		it('should return the correct message', () => {
-			try{
+			try {
 				throw new err.InvalidOperationError();
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe('Operation is not valid.');
 			}
@@ -71,9 +71,9 @@ describe('errors.js', () => {
 		});
 
 		it('should return the correct default message', () => {
-			try{
+			try {
 				throw new err.NotImplementedError();
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe('The function or operation is not implemented.');
 			}
@@ -82,9 +82,9 @@ describe('errors.js', () => {
 		it('should return the correct transmitted message', () => {
 			let message = 'test message';
 
-			try{
+			try {
 				throw new err.NotImplementedError(message);
-			} catch(e) {
+			} catch (e) {
 				expect(e.name).toBe('Error');
 				expect(e.message).toBe(message);
 			}

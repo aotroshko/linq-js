@@ -22,11 +22,9 @@ const config = {
 		preLoaders: [
 			{ test: /\.js$/, loader: 'eslint', exclude: /node_modules/ }
 		],
-		loaders: [{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: 'babel-loader',
-		}]
+		loaders: [
+			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+		]
 	},
 	eslint: {
 		failOnWarning: false,

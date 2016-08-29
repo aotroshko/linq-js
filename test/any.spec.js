@@ -3,9 +3,10 @@ import * as err from '../src/errors.js';
 
 describe('any.js', () => {
 	it('should return ArgumentNullError if "source" parameter is not passed', () => {
-		let result = function(){
+		let result = function() {
 			anyFn(null);
 		};
+
 		expect(result).toThrow(new err.ArgumentNullError('source'));
 	});
 
@@ -19,7 +20,7 @@ describe('any.js', () => {
 
 		it('should return "false" if source array has no items', () => {
 			let result = anyFn([]);
-				
+
 			expect(result).toBe(false);
 		});
 	});
@@ -33,9 +34,9 @@ describe('any.js', () => {
 			expect(result).toBe(true);
 		});
 
-		it('should return "false" if there is all elements of a sequence does not satisfy a condition', () => {
+		it('should return "false" if all elements of a sequence does not satisfy a condition', () => {
 			let source = [1, 2, 3],
-				predicate = (x) => (x === 5),
+				predicate = (x) => x === 5,
 				result = anyFn(source, predicate);
 
 			expect(result).toBe(false);
