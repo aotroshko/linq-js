@@ -1,3 +1,4 @@
+import allFn from './all.js';
 import anyFn from './any.js';
 import whereFn from './where.js';
 
@@ -12,6 +13,10 @@ class Enumerable {
 		} else {
 			throw new Error('Given parameter is not an array.');
 		}
+	}
+
+	all(predicate) {
+		return allFn(this[source], predicate);
 	}
 
 	any(predicate) {
