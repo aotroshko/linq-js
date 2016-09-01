@@ -5,7 +5,7 @@ export default (source, predicate) => {
 		throw new err.ArgumentNullError('source');
 	}
 
-	if(source.length === 0) {
+	if (source.length === 0) {
 		return null;
 	}
 
