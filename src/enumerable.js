@@ -1,5 +1,6 @@
 import allFn from './all.js';
 import anyFn from './any.js';
+import firstFn from './first.js';
 import whereFn from './where.js';
 
 let source = Symbol();
@@ -21,6 +22,10 @@ class Enumerable {
 
 	any(predicate) {
 		return anyFn(this[source], predicate);
+	}
+
+	first(predicate) {
+		return firstFn(this[source], predicate);
 	}
 
 	toArray() {
