@@ -16,7 +16,7 @@ export default (source, predicate) => {
 	for (let i = 0; i < source.length; i++) {
 		let item = source[i];
 
-		if (!predicate(item)) {
+		if (predicate(item)) {
 			return item;
 		}
 	}
