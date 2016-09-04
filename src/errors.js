@@ -32,8 +32,8 @@ class IndexOutOfRangeError extends CustomError {
 }
 
 class InvalidOperationError extends CustomError {
-	constructor() {
-		super('Operation is not valid.');
+	constructor(message) {
+		super(message || 'Operation is not valid.');
 	}
 }
 
@@ -43,10 +43,24 @@ class NotImplementedError extends CustomError {
 	}
 }
 
+class NoElementsError extends InvalidOperationError {
+	constructor() {
+		super('Sequence contains no elements.');
+	}
+}
+
+class NoMatchError extends InvalidOperationError {
+	constructor() {
+		super('Sequence contains no matching element.');
+	}
+}
+
 export {
 	ArgumentNullError,
 	ArgumentOutOfRangeError,
 	IndexOutOfRangeError,
 	InvalidOperationError,
-	NotImplementedError
-}
+	NotImplementedError,
+	NoElementsError,
+	NoMatchError
+};
