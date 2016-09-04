@@ -6,7 +6,7 @@ export default (source, predicate) => {
 	}
 
 	if (source.length === 0) {
-		return null;
+		throw new err.NoElementsError();
 	}
 
 	if (!predicate) {
@@ -21,5 +21,5 @@ export default (source, predicate) => {
 		}
 	}
 
-	return null;
+	throw new err.NoMatchError();
 }

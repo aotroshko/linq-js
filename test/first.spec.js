@@ -18,10 +18,12 @@ describe('first.js', () => {
 			expect(result).toBe(1);
 		});
 
-		it('should return null if source array has no items', () => {
-			let result = firstFn([]);
+		it('should throw NoElementsError if source array has no items', () => {
+			let result = function() {
+				firstFn([]);
+			};
 
-			expect(result).toBeNull();
+			expect(result).toThrow(new err.NoElementsError());
 		});
 	});
 
@@ -38,12 +40,14 @@ describe('first.js', () => {
 			expect(result.name).toBe('Name2');
 		});
 
-		it('should return null if all elements of a sequence does not satisfy a condition', () => {
+		it('should throw NoMatchError if all elements of a sequence does not satisfy a condition', () => {
 			let source = [1, 2, 3],
 				predicate = (x) => x === 5,
-				result = firstFn(source, predicate);
+				result = function() {
+					firstFn(source, predicate)
+				};
 
-			expect(result).toBeNull();
+			expect(result).toThrow(new err.NoMatchError());
 		});
 	});
 });
