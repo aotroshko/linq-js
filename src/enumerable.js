@@ -1,5 +1,6 @@
 import allFn from './all.js';
 import anyFn from './any.js';
+import containsFn from './contains.js';
 import firstFn from './first.js';
 import firstOrDefaultFn from './firstOrDefault.js';
 import whereFn from './where.js';
@@ -23,6 +24,10 @@ class Enumerable {
 
 	any(predicate) {
 		return anyFn(this[source], predicate);
+	}
+
+	contains(value, comparer) {
+		return containsFn(this[source], value, comparer);
 	}
 
 	first(predicate) {
