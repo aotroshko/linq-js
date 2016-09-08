@@ -55,6 +55,18 @@ class NoMatchError extends InvalidOperationError {
 	}
 }
 
+class MoreThanOneElementError extends InvalidOperationError {
+	constructor() {
+		super('Sequence contains more than one element.');
+	}
+}
+
+class MoreThanOneMatchError extends InvalidOperationError {
+	constructor() {
+		super('Sequence contains more than one matching element.');
+	}
+}
+
 export {
 	ArgumentNullError,
 	ArgumentOutOfRangeError,
@@ -62,5 +74,7 @@ export {
 	InvalidOperationError,
 	NotImplementedError,
 	NoElementsError,
-	NoMatchError
+	NoMatchError,
+	MoreThanOneElementError,
+	MoreThanOneMatchError
 };
