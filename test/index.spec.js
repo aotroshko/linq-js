@@ -8,4 +8,8 @@ describe('index.js', () => {
 	it('should add asEnumerable function to String.prototype', () => {
 		expect(String.prototype.asEnumerable).toBeDefined();
 	});
+
+	it('should add Enumerable constructor to global object', () => {
+		expect(window.Enumerable).toBeDefined();
+	});
 });
