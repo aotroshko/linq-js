@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aotroshko/linq-js.git"
+    "url": "git+https://github.com/otroshko/linq-js.git"
   },
   "keywords": [
     "linq",
@@ -21,13 +21,13 @@
   "author": {
     "name": "Andrii Otroshko",
     "email": "otroshko@gmail.com",
-    "url": "https://github.com/aotroshko"
+    "url": "https://github.com/otroshko"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aotroshko/linq-js/issues"
+    "url": "https://github.com/otroshko/linq-js/issues"
   },
-  "homepage": "https://github.com/aotroshko/linq-js#readme",
+  "homepage": "https://github.com/otroshko/linq-js#readme",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
