@@ -46,6 +46,19 @@ class Enumerable {
 		this[source] = whereFn(this[source], predicate);
 		return this;
 	}
+
+	[Symbol.iterator]() {
+		let arr = this[source],
+			nextIndex = 0;
+
+		return {
+			next: () => {
+				return nextIndex < arr.length
+					? { value: arr[nextIndex++], done: false }
+					: { done: true };
+			}
+		}
+	}
 }
 
 export default Enumerable;
