@@ -3,6 +3,7 @@ import anyFn from './any.js';
 import containsFn from './contains.js';
 import firstFn from './first.js';
 import firstOrDefaultFn from './firstOrDefault.js';
+import lastFn from './first.js';
 import whereFn from './where.js';
 
 let source = Symbol();
@@ -36,6 +37,10 @@ class Enumerable {
 
 	firstOrDefault(predicate) {
 		return firstOrDefaultFn(this[source], predicate);
+	}
+
+	last(predicate) {
+		return lastFn(this[source], predicate);
 	}
 
 	toArray() {
