@@ -1,4 +1,5 @@
 import * as err from './errors.js';
+import * as utils from './utils.js';
 
 export default (source, predicate) => {
 	if (!source) {
@@ -16,6 +17,8 @@ export default (source, predicate) => {
 			throw new err.MoreThanOneElementError();
 		}
 	}
+
+	predicate = utils.parseLambda(predicate);
 
 	let result = null;
 

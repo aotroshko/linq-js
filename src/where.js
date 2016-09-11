@@ -1,4 +1,5 @@
 import * as err from './errors.js';
+import * as utils from './utils.js';
 
 export default (source, predicate) => {
 	if (!source) {
@@ -8,6 +9,8 @@ export default (source, predicate) => {
 	if (!predicate) {
 		throw new err.ArgumentNullError('predicate');
 	}
+
+	predicate = utils.parseLambda(predicate);
 
 	let result = [];
 
