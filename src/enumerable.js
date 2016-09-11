@@ -3,7 +3,7 @@ import anyFn from './any.js';
 import containsFn from './contains.js';
 import firstFn from './first.js';
 import firstOrDefaultFn from './firstOrDefault.js';
-import lastFn from './first.js';
+import lastFn from './last.js';
 import lastOrDefaultFn from './lastOrDefault.js';
 import whereFn from './where.js';
 

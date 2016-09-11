@@ -1,7 +1,6 @@
 import * as err from './errors.js';
 
 let parseLambda = (lambdaExpression) => {
-	debugger;
 	if (typeof lambdaExpression !== 'string') {
 		return lambdaExpression;
 	}
