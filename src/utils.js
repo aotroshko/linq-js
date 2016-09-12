@@ -13,6 +13,8 @@ let parseLambda = (lambdaExpression) => {
 		throw new err.InvalidOperationError();
 	}
 
+	inputParameters = inputParameters.replace('(', '').replace(')', '');
+
 	if (!expression.startsWith('return ')) {
 		expression = 'return ' + expression;
 	}
