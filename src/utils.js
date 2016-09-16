@@ -22,11 +22,6 @@ let parseLambda = (lambdaExpression) => {
 	return new Function(inputParameters, expression);
 }
 
-let isInteger = function(value) {
-	return typeof x === "number" && isFinite(x) && Math.floor(x) === x;
-};
-
 export {
-	isInteger,
 	parseLambda
 }
