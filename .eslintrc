@@ -70,7 +70,7 @@
 		"no-useless-concat": 2,
 		"no-with": 2,
 		"object-curly-spacing": [2, "always"],
-		"one-var": 2,
+		"one-var": 0,
 		"operator-assignment": [2, "always"],
 		"operator-linebreak": [2, "before"],
 		"padded-blocks": [2, "never"],
