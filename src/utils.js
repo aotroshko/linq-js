@@ -23,7 +23,7 @@ let parseLambda = (lambdaExpression) => {
 }
 
 let isInteger = function(value) {
-	return typeof x === 'number' && isFinite(x) && Math.floor(x) === x;
+	return typeof value === 'number' && isFinite(value) && Math.floor(value) === value;
 };
 
 export {
