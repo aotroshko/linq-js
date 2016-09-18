@@ -5,6 +5,7 @@ import firstFn from './first.js';
 import firstOrDefaultFn from './firstOrDefault.js';
 import lastFn from './last.js';
 import lastOrDefaultFn from './lastOrDefault.js';
+import takeFn from './take.js';
 import whereFn from './where.js';
 
 let source = Symbol();
@@ -46,6 +47,11 @@ class Enumerable {
 
 	lastOrDefault(predicate) {
 		return lastOrDefaultFn(this[source], predicate);
+	}
+
+	take(count) {
+		this[source] = takeFn(this[source], count);
+		return this;
 	}
 
 	toArray() {
